@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1 id="title">Vietnam International Young Talents<br>(Tổ Chức Quốc Tế Nghiên Cứu Và Phát Triển Tài Năng Trẻ Việt Nam)</h1>
+            <h2 id="description">Chúng tôi có 50 suất học bổng toàn phần và suất 300 học bổng 30.000.000 VNĐ  
+                đến từ 5 trường liên kết với tổ chức.<br>Anh chị vui lòng điền bản khảo sát dưới đây</h2>
+            <h3>(Chỉ áp dụng ở khu vực TPHCM)</h3>
+        </header>
+        <form action="#" id="survey-form">
+            <div class="form-group">
+                <label for="name" id="label-name">Họ Và Tên</label><br>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Ví dụ: Trần Văn A" required>
+            </div>
+            <div class="form-group">
+                <label for="age" id="label-age">Số Điện Thoại</label><br>
+                <input type="number" name="age" class="form-control" id="age" placeholder="Ví dụ: 090xxxxxxx" min="1" max="99"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="name" id="label-name">Địa chỉ</label><br>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Ví dụ: xx Đường, Quận, Phường" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="label-email">Email</label><br>
+                <input type="text" name="email" class="form-control" id="email" placeholder="Ví dụ: example@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="age" id="label-age">Tuổi của con bạn</label><br>
+                <input type="number" name="age" class="form-control" id="age" placeholder="Tuổi" min="1" max="99"
+                    required>
+            </div>
+            <div class="form-group">
+                <p>Bạn quan tâm đến học bổng trường nào? (Danh sách 5 trường mà chúng tôi liên kết)</p>
+                <select name="role" id="dropdown" class="form-control" required>
+                    <option disabled value="vas" selected value>VAS (Trường Quốc Tế Việt Úc)</option>
+                    <option value="igs">IGS (Trường Quốc Tế Đức)</option>
+                    <option value="uts">UTS (Trường Quốc Tế Nam Mỹ)</option>
+                    <option value="ssis">SSIS (Trường Quốc tế Nam Sài Gòn)</option>
+                    <option value="prefer">EISH (Trường Quốc Tế Châu Âu)</option>
+ 
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Nếu bé nhà anh/chị không đủ điều kiện để được học bông toàn phần thì còn suất học bổng 30 triệu. Anh/chị hoàn toàn có quyền nhận hoặc không?</p>
+                <label class="radio-label">
+                    <input name="user-recommend" class="input-radio" value="definitely" type="radio" checked>
+                    Có
+                </label>
+                <label class="radio-label">
+                    <input name="user-recommend" class="input-radio" value="maybe" type="radio">
+                    Không
+                </label>
+            </div>
+            <div class="form-group">
+                <p>Sau khi nhận được khảo sát để tránh tình trạng làm phiền, nhân viên của chúng tôi sẽ liên hệ để tư vấn. Anh/chị có đồng ý tư vấn hay không?</p>
+                <label class="radio-label">
+                    <input name="user-recommend" class="input-radio" value="definitely" type="radio" checked>
+                    Có
+                </label>
+                <label class="radio-label">
+                    <input name="user-recommend" class="input-radio" value="maybe" type="radio">
+                    Không
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>Bạn có thắc mắc và cần giải đáp hãy điền vào bên dưới</p>
+                <textarea name="comment" id="comments" class="input-textarea" placeholder="Điền thắc mắc của bạn"></textarea>
+            </div>
+            <div style="color: white; font-weight: bold;" class="attention">
+                <h3>Lưu ý:trong quá trình tư vấn anh chị vui lòng không cung cấp tài khoản ngân hàng, hay bất cứ thông tin cá nhân nào khác cho nhân viên tư vấn như hình ảnh cá nhân, CCCD...<br>
+                    Chỉ trao đổi về tình hình học tập của bé nhà anh chị và mong muốn của bé, cũng như về công việc gia đình. </h3>
+            </div>
+            <div>
+                <button style="height: 50px;" type="submit" id="submit">
+                Xác Nhận
+                </button>
+            </div>
+            <div class="footer">
+                <h1 style="color: white; font-weight: bold; text-align: center;">Xin chân thành cảm ơn!</h1>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
