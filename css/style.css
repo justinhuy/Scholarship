@@ -31,7 +31,12 @@ h3 {
     padding: 40px;
     display: block;
     border-radius: 5px;
-    margin: 0 25%;
+}
+
+@media (max-width: 768px) {
+    #survey-form{
+        width: 500px;
+    }
 }
 
 .form-group {
@@ -54,7 +59,7 @@ label {
     border-radius: 5px;
     height: 40px;
     width: 100%;
-    padding: 0px 8px;
+    /* padding: 0px 8px; */
 }
 
 p {

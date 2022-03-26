@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grid.css">
     <title>Survey Form</title>
 </head>
 
@@ -13,30 +14,30 @@
     <main>
         <header>
             <h1 id="title">Vietnam International Young Talents<br>(Tổ Chức Quốc Tế Nghiên Cứu Và Phát Triển Tài Năng Trẻ Việt Nam)</h1>
-            <h2 id="description">Chúng tôi có 50 suất học bổng toàn phần và suất 300 học bổng 30.000.000 VNĐ  
-                đến từ 5 trường liên kết với tổ chức.<br>Anh chị vui lòng điền bản khảo sát dưới đây</h2>
-            <h3>(Chỉ áp dụng ở khu vực TPHCM)</h3>
+            <h4 id="description">Chúng tôi có 50 suất học bổng toàn phần và suất 300 học bổng 30.000.000 VNĐ đến từ 5 trường liên kết với tổ chức.<br>Vui lòng điền vào khảo sát dưới đây để có cơ hội nhận được học bổng
+            </h4>
+            <h5>(Chỉ áp dụng ở khu vực TPHCM)</h5>
         </header>
-        <form action="#" id="survey-form">
+        <form action="#" id="survey-form" class="container">
             <div class="form-group">
-                <label for="name" id="label-name">Họ Và Tên</label><br>
+                <label for="name" id="label-name">Họ Và Tên:</label><br>
                 <input type="text" name="name" class="form-control" id="name" placeholder="Ví dụ: Trần Văn A" required>
             </div>
             <div class="form-group">
-                <label for="age" id="label-age">Số Điện Thoại</label><br>
+                <label for="age" id="label-age">Số Điện Thoại:</label><br>
                 <input type="number" name="age" class="form-control" id="age" placeholder="Ví dụ: 090xxxxxxx" min="1" max="99"
                     required>
             </div>
             <div class="form-group">
-                <label for="name" id="label-name">Địa chỉ</label><br>
+                <label for="name" id="label-name">Địa chỉ:</label><br>
                 <input type="text" name="name" class="form-control" id="name" placeholder="Ví dụ: xx Đường, Quận, Phường" required>
             </div>
             <div class="form-group">
-                <label for="email" id="label-email">Email</label><br>
+                <label for="email" id="label-email">Email:</label><br>
                 <input type="text" name="email" class="form-control" id="email" placeholder="Ví dụ: example@gmail.com" required>
             </div>
             <div class="form-group">
-                <label for="age" id="label-age">Tuổi của con bạn</label><br>
+                <label for="age" id="label-age">Tuổi của con bạn:</label><br>
                 <input type="number" name="age" class="form-control" id="age" placeholder="Tuổi" min="1" max="99"
                     required>
             </div>
@@ -50,6 +51,17 @@
                     <option value="prefer">EISH (Trường Quốc Tế Châu Âu)</option>
  
                 </select>
+            </div>
+            <div class="form-group">
+                <p>Con bạn có nhu cầu du học hay không?</p>
+                <label class="radio-label">
+                    <input name="user-abroad" class="input-radio" value="definitely" type="radio" checked>
+                    Có
+                </label>
+                <label class="radio-label">
+                    <input name="user-abroad" class="input-radio" value="maybe" type="radio">
+                    Không
+                </label>
             </div>
             <div class="form-group">
                 <p>Nếu bé nhà anh/chị không đủ điều kiện để được học bông toàn phần thì còn suất học bổng 30 triệu. Anh/chị hoàn toàn có quyền nhận hoặc không?</p>
@@ -78,9 +90,9 @@
                 <p>Bạn có thắc mắc và cần giải đáp hãy điền vào bên dưới</p>
                 <textarea name="comment" id="comments" class="input-textarea" placeholder="Điền thắc mắc của bạn"></textarea>
             </div>
-            <div style="color: white; font-weight: bold;" class="attention">
-                <h3>Lưu ý:trong quá trình tư vấn anh chị vui lòng không cung cấp tài khoản ngân hàng, hay bất cứ thông tin cá nhân nào khác cho nhân viên tư vấn như hình ảnh cá nhân, CCCD...<br>
-                    Chỉ trao đổi về tình hình học tập của bé nhà anh chị và mong muốn của bé, cũng như về công việc gia đình. </h3>
+            <div style="color: white; font-weight: bold;" class="attention mb-5">
+                <h4>Lưu ý:trong quá trình tư vấn anh chị vui lòng không cung cấp tài khoản ngân hàng, hay bất cứ thông tin cá nhân nào khác cho nhân viên tư vấn như hình ảnh cá nhân, CCCD...<br>
+                    Chỉ trao đổi về tình hình học tập của bé nhà anh chị và mong muốn của bé, cũng như về công việc gia đình. </h4>
             </div>
             <div>
                 <button style="height: 50px;" type="submit" id="submit">
@@ -92,6 +104,11 @@
             </div>
         </form>
     </main>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
