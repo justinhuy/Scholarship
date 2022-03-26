@@ -1,10 +1,9 @@
 body,
 html {
-    box-sizing: border-box;
     height: 100%;
     width: 100%;
     margin: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hinh1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.63)), url(img/hinh1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
@@ -33,11 +32,6 @@ h3 {
     border-radius: 5px;
 }
 
-@media (max-width: 768px) {
-    #survey-form{
-        width: 500px;
-    }
-}
 
 .form-group {
     margin: 0 0 30px;
@@ -94,4 +88,10 @@ p {
     background-color: #37af65;
     color: #fff;
     margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
 }

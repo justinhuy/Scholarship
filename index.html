@@ -25,7 +25,7 @@
             </div>
             <div class="form-group">
                 <label for="age" id="label-age">Số Điện Thoại:</label><br>
-                <input type="number" name="age" class="form-control" id="age" placeholder="Ví dụ: 090xxxxxxx" min="1" max="99"
+                <input name="age" class="form-control" id="age" placeholder="Ví dụ: 090xxxxxxx" min="1" max="99"
                     required>
             </div>
             <div class="form-group">
@@ -75,7 +75,7 @@
                 </label>
             </div>
             <div class="form-group">
-                <p>Sau khi nhận được khảo sát để tránh tình trạng làm phiền, nhân viên của chúng tôi sẽ liên hệ để tư vấn. Anh/chị có đồng ý tư vấn hay không?</p>
+                <p>Sau khi hoàn thành khảo sát, sẽ có bộ phận nhân viên tư vấn của chúng tôi liên hệ đến quý anh chị, anh chị có đồng ý nhận tư vấn không?</p>
                 <label class="radio-label">
                     <input name="user-recommend" class="input-radio" value="definitely" type="radio" checked>
                     Có
@@ -91,8 +91,10 @@
                 <textarea name="comment" id="comments" class="input-textarea" placeholder="Điền thắc mắc của bạn"></textarea>
             </div>
             <div style="color: white; font-weight: bold;" class="attention mb-5">
-                <h4>Lưu ý:trong quá trình tư vấn anh chị vui lòng không cung cấp tài khoản ngân hàng, hay bất cứ thông tin cá nhân nào khác cho nhân viên tư vấn như hình ảnh cá nhân, CCCD...<br>
-                    Chỉ trao đổi về tình hình học tập của bé nhà anh chị và mong muốn của bé, cũng như về công việc gia đình. </h4>
+                <h4 class="mb-3">Những điều cần lưu ý sau khi làm bảng khảo sát:</h4>
+                    <p>- Để tránh làm phiền quý anh chị, nhân viên của chúng tôi nếu có liên hệ sẽ hỏi quý anh chị có đồng ý tư vấn hay không.<br> 
+                    - Trong quá trình tư vấn, quý anh chị vui lòng không cung cấp thông số tài khoản ngân hàng hay bất cứ thông tin cá nhân nào khác cho nhân viên tư vấn như hình ảnh cá nhân, căn cước công dân,... </p>
+    
             </div>
             <div>
                 <button style="height: 50px;" type="submit" id="submit">
