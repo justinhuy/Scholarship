@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/grid.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Survey Form</title>
 </head>
 
@@ -20,6 +21,12 @@
         </header>
         <form method="POST" name="google-sheet" id="survey-form" class="container">
             <div class="form-group">
+                <div style="color: white; font-weight: bold;" class="attention mb-5">
+                    <h4 class="mb-3">*Lưu ý:</h4>
+                        <p>- Anh/Chị vui lòng không cung cấp thông tin cá nhân, tài khoản ngân hàng cho nhân viên liên hệ xem xét học bổng.<br> 
+                            - Chúng tôi chỉ hỏi thăm về tình hình gia đình và kết quả học tập của cháu nhà anh chị để nộp đơn và thông báo kết quả.</p>
+        
+                </div>
                 <label for="name" id="label-name">Họ Và Tên:</label><br>
                 <input type="text" name="Name" class="form-control" id="name" placeholder="Ví dụ: Trần Văn A" required>
             </div>
@@ -66,22 +73,22 @@
             <div class="form-group">
                 <p>Nếu bé nhà anh/chị không đủ điều kiện để được học bông toàn phần thì còn suất học bổng 30 triệu. Anh/chị hoàn toàn có quyền nhận hoặc không?</p>
                 <label class="radio-label">
-                    <input name="user-recommend" class="input-radio" value="definitely" type="radio" checked>
+                    <input name="scholarship" class="input-radio" value="yes" type="radio" checked>
                     Có
                 </label>
                 <label class="radio-label">
-                    <input name="user-recommend" class="input-radio" value="maybe" type="radio">
+                    <input name="scholarship" class="input-radio" value="no" type="radio">
                     Không
                 </label>
             </div>
             <div class="form-group">
                 <p>Sau khi hoàn thành khảo sát, sẽ có bộ phận nhân viên tư vấn của chúng tôi liên hệ đến quý anh chị, anh chị có đồng ý nhận tư vấn không?</p>
                 <label class="radio-label">
-                    <input name="user-recommend" class="input-radio" value="definitely" type="radio" checked>
+                    <input name="contact" class="input-radio" value="yes" type="radio" checked>
                     Có
                 </label>
                 <label class="radio-label">
-                    <input name="user-recommend" class="input-radio" value="maybe" type="radio">
+                    <input name="contact" class="input-radio" value="no" type="radio">
                     Không
                 </label>
             </div>
@@ -90,12 +97,7 @@
                 <p>Bạn có thắc mắc và cần giải đáp hãy điền vào bên dưới</p>
                 <textarea name="comment" id="comments" class="input-textarea" placeholder="Điền thắc mắc của bạn"></textarea>
             </div>
-            <div style="color: white; font-weight: bold;" class="attention mb-5">
-                <h4 class="mb-3">*Những điều cần lưu ý sau khi làm bảng khảo sát:</h4>
-                    <p>- Để tránh làm phiền quý anh chị, nhân viên của chúng tôi nếu có liên hệ sẽ hỏi quý anh chị có đồng ý tư vấn hay không.<br> 
-                    - Trong quá trình tư vấn, quý anh chị vui lòng không cung cấp thông số tài khoản ngân hàng hay bất cứ thông tin cá nhân nào khác cho nhân viên tư vấn như hình ảnh cá nhân, căn cước công dân,... </p>
-    
-            </div>
+          
             <div>
                 <button style="height: 50px;" type="submit" id="submit">
                 Xác Nhận
@@ -108,6 +110,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
 <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwdprhbWk2QBSxiTOwutdMBHoGVCz6-LWPC0KiVPLib7SIK1W7ayW__jwnJAnF5EoeB/exec'
     const form = document.forms['google-sheet']
@@ -115,11 +118,11 @@
     form.addEventListener('submit', e => {
         e.preventDefault()
         fetch(scriptURL, {method: 'POST', body: new FormData(form)})
-            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon.."))
+            .then(response =>  document.getElementById("survey-form").reset(), alert("Chúng tôi đã nhận thông tin. Chúng tôi sẽ sớm liên hệ với bạn."))
             .catch(error => console.error('Error!', error.message))
     })
 </script>
-  <script src="main.js"></script>
+
 </body>
 
 </html>
